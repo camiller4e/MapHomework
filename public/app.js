@@ -5,16 +5,17 @@ const app = function(){
   let container = "main-map"
   let markerCoords = [45.0456809, -79.330473];
 
+  let goCoords = [55.8678415, -4.2775452]
+
+  const button = document.getElementById('button');
+  button.addEventListener('click', function(){
+    mainMap.changeCoords(goCoords);
+  });
+
   const mainMap = new MapWrapper(container, coords, zoom);
   mainMap.addMarker(markerCoords)
 
-  mainMap.changeCoords([55.8678415, -4.2775452]);
-
 }
-
-// var handleButtonClick = function () {
-//   var button = document.querySelector('button');
-// }
 
 
 

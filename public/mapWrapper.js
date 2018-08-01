@@ -14,11 +14,10 @@ const MapWrapper = function(container, coords, zoom){
 
 MapWrapper.prototype.addMarker = function (markerCoords) {
   L.marker(markerCoords).addTo(this.map);
+  L.marker(markerCoords).addTo(this.map).bindPopup(`The coordinates of this marker are: ${markerCoords}`);
 
 };
 
 MapWrapper.prototype.changeCoords = function (coords) {
-  document.addEventListener('click',
-  () => this.map.flyTo(coords, 12));
-  L.marker(markerCoords).addTo(this.map).bindPopup(`The coordinates of this marker are: ${coords}`);
+  this.map.flyTo(coords, 12);
 };

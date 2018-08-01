@@ -3,3 +3,24 @@
   height: 300px;
 
 }
+
+body {
+
+  font-family: helvetica;
+
+}
+
+h1 {
+
+  font-size: 80px;
+  text-align: center;
+
+}
+
+footer {
+
+  padding-top: 25px;
+
+  text-align: center;
+
+}
